@@ -21,7 +21,12 @@ Top JavaScript interview questions
 | 13 | [What is Temporal Dead Zone](#13-what-is-temporal-dead-zone)  |
 | 14 | [What is IIFE](#14-what-is-iife)  |
 | 15 | [What is Hoisting](#15-what-is-hoisting)  |
-
+| 16 | [What are Cookies](#16-what-are-cookies)  |
+| 17 | [What is memoization](#17-what-is-memoization)  |
+| 18 | [Difference between var, let and const](#18-difference-between-var-let-and-const)  |
+| 19 | [What is a callback function](#19-what-is-a-callback-function)  |
+| 20 | [Is it possible to have both local and global variables with the same name](#20-is-it-possible-to-have-both-local-and-global-variables-with-the-same-name) |
+| 21 | [Difference between Local Storage and Session Storage](#21-difference-between-local-storage-and-session-storage)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -205,6 +210,93 @@ The output of above code will be "demo console" because the function declaration
 + Only the declaration is hoisted, not the initialization. 
 ```
 
+### 16. What are Cookies
+In javascript, a cookie is a piece of data, stored in small text files, on the user's computer by the browser.
+Cookies are set, read and deleted using the document.cookie property
+
+```javascript
+//**Set a cookie**
+document.cookie = "username=surbhi";
+
+//**Read a cookie**
+let cookie_variable = document.cookie; 
+
+//**Delete a cookie** (set the expiration date to a past date/time)
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+```
+
+### 17. What is memoization
+Memoization is a technique used in JavaScript to optimize the performance of functions by caching the results of expensive function calls, based on their input parameters.
+For e.g., If a function is called multiple times with the same input parameters, then it will perform the same calculations each time. By memoizing the function, we can use the cached result.
+
+```js
+function memoizedAdd(num1, num2) {
+  let cache = {};
+  return function (a, b) {
+    const key = num1 + ' and ' + num2;
+    if (key in cache) {
+      console.log('Retrieving from cache:', key);
+      return cache[key];
+    } else {
+      console.log('Calculating result:', key);
+      const result = num1 + num2;
+      cache[key] = result;
+      return result;
+    }
+  };
+}
+
+const add = memoizedAdd();
+console.log(add(2, 3)); // "Calculating result:", "2 and 3", output=====> 5
+console.log(add(2, 3)); // "Retrieving from cache:", "2 and 3" output=====> 5
+```
+
+### 18. Difference between var, let and const
+In javascript, there are 3 ways to declare a variable - var, let, and const. However, they have some differences in their behavior and scope.
+| var | let | const |
+| --- | --- | --- |
+| Function scoped | Block scoped | Block scoped | 
+| Can be re-declared in the same scope | Can not be re-declared in the same scope | Can not be re-declared in the same scope |
+| Can be updated in the same scope | Can be updated in the same scope | Can not be updated in the same scope |
+| Hoisted to the top of their scope | Hoisted to the top but are not initialized | Hoisted to the top but are not initialized |
+| Can be declared without being initialized |Can be declared without being initialized | Can not be declared without being initialized |
+
+### 19. What is a callback function
+A callback function is a function that is passed as an argument to another function. The function that receives the callback as an argument can then invoke the callback at any time during its execution. 
+```js
+function message(callback) {
+    console.log('Hi, i am message function');
+    callback();
+}
+// callback function
+function callBackFun() {
+    console.log('Hey, I am a callback function');
+}
+// passing callback function as an argument to message function
+message(callBackFun);
+```
+
+### 20. Is it possible to have both local and global variables with the same name
+Yes, we can have both with the same name. But when we do this, the local variable will take precedence over the global variable within the scope of the function or block of code in which it is declared.
+
+However, outside of that scope, the global variable will still be accessible using its name.
+
+```js
+let a = 10;
+function Demo(){
+let a = 20;
+console.log(a, "local scope");
+}
+Demo();
+console.log(a, "global scope");
+```
+
+### 21. Difference between Local Storage and Session Storage
+Local storage and session storage are web storage provided by web browsers to store data on the client-side
+
+**Local Storage** - Data stored in local storage will persist even after the browser window is closed or the user navigates away from the website and it is available across all windows and tabs of the same origin.
+
+**Session Storage** - Data stored in session storage will be deleted when the browser window is closed or the session ends and it is available only within the same window or tab that created the data.
 
 ******************************In progress
 
