@@ -27,6 +27,15 @@ Top JavaScript interview questions
 | 19 | [What is a callback function](#19-what-is-a-callback-function)  |
 | 20 | [Is it possible to have both local and global variables with the same name](#20-is-it-possible-to-have-both-local-and-global-variables-with-the-same-name) |
 | 21 | [Difference between Local Storage and Session Storage](#21-difference-between-local-storage-and-session-storage)  |
+| 22 | [Difference between forEach() and map()](#22-difference-between-foreach-and-map)  |
+| 23 | [What is rest operator](#23-what-is-rest-operator)  |
+| 24 | [What is spread operator](#24-what-is-spread-operator)  |
+| 25 | [Difference between async and defer](#25-difference-between-async-and-defer)  |
+| 26 | [What is Nullish coalescing operator](#26-what-is-nullish-coalescing-operator)  |
+| 27 | [What is the difference between a parameter and an argument](#27-what-is-the-difference-between-a-parameter-and-an-argument)  |
+| 28 | [What is a closure](#28-what-is-a-closure)  |
+| 29 | [Difference between function declaration and function expression](#29-difference-between-function-declaration-and-function-expression)  |
+
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -84,7 +93,13 @@ console.log(person.name);  //output - Surbhi
 
 ### 4. Difference between “==” and “===” operators
 * == : While comparing two operands, checks for only value
+```js
+console.log(1=="1");  // output=>>>>>>>>> true
+```
 * === : While comparing two operands, checks for value as well as data type
+```js
+console.log(1==="1");  // output=>>>>>>>>> false
+```
 
 ### 5. Is javascript single-threaded or multi-threaded
 * JavaScript is Single-threaded
@@ -200,7 +215,7 @@ The output of above code will be 10 because the variable "a" is hoisted to the t
 ```javascript
 demo();  // demo console
 function demo() {
-	console.log('demo console');  //
+	console.log('demo console'); 
 }
 ```
 The output of above code will be "demo console" because the function declaration is hoisted to the top of the scope, allowing it to be called before it is declared in the code.
@@ -247,8 +262,8 @@ function memoizedAdd(num1, num2) {
 }
 
 const add = memoizedAdd();
-console.log(add(2, 3)); // "Calculating result:", "2 and 3", output=====> 5
-console.log(add(2, 3)); // "Retrieving from cache:", "2 and 3" output=====> 5
+console.log(add(2, 3)); // "Calculating result:", "2 and 3", output ========> 5
+console.log(add(2, 3)); // "Retrieving from cache:", "2 and 3" output ========> 5
 ```
 
 ### 18. Difference between var, let and const
@@ -297,6 +312,138 @@ Local storage and session storage are web storage provided by web browsers to st
 **Local Storage** - Data stored in local storage will persist even after the browser window is closed or the user navigates away from the website and it is available across all windows and tabs of the same origin.
 
 **Session Storage** - Data stored in session storage will be deleted when the browser window is closed or the session ends and it is available only within the same window or tab that created the data.
+
+### 22. Difference between forEach() and map()
+map() and forEach() are array methods that can be used to iterate over an array.
+**map()** 
+1. map() method receives a function as an argument, executes it once for each array element and returns a new array
+2. It is generally used when we need to modify/change data, because it returns a new array with the transformed data
+3. It is chainable because we can attach sort(), filter() etc. after performing a map() method on an array
+
+```js
+const arr = [1,2,3,4,5]
+let result = arr.map(x => x * x)
+console.log(result)   // output ========> [1,4,9,16,25]
+```
+
+**forEach()** 
+1. forEach() method receives a function as an argument, executes it once for each array element but returns undefined.
+2. It is generally used when we just need to iterate over an array 
+3. It is not chainable
+
+```js
+const arr = [1,2,3,4,5]
+let result = arr.forEach(x => x * x)
+console.log(result)   // output ========> undefined
+```
+
+### 23. What is rest operator
+1. The rest operator was introduced in ES6 (ECMAScript 2015) and it is represented by three dots (...)
+2. It is used in function parameters and allows you to represent an indefinite number of arguments as an array
+
+```js
+function addition(...numbers) {
+  return numbers.reduce((a,b)=>a+b);
+}
+console.log(addition(1, 2, 3, 4)); // output ========> 10
+```
+
+3. It collects all the remaining arguments passed to a function into an array
+
+```js
+function profile(name, designation,...location) {
+  return location
+}
+console.log(profile("surbhi","SE","India","Indore","M.P")); // output ========> ["India", "Indore", "M.P"]
+```
+
+### 24. What is spread operator
+1. The spread operator was introduced in ES6 (ECMAScript 2015) and it is represented by three dots (...)
+2. It allows an iterable to be spread into individual elements
+```js
+const arr = [1, 2, 3, 4,5];
+console.log(...arr); // output ======> 1, 2, 3, 4, 5
+```
+3. It can be used to copy the elements of an existing array into a new array, or to concatenate arrays
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+console.log(arr3);  // output =======> [1, 2, 3, 4, 5, 6]
+```
+4. It can be used to copy the properties of an existing object into a new object
+```js
+const obj1 = { a:1, b:2 };
+const obj2 = { c:3 };
+const obj3 = { ...obj1, ...obj2 }; 
+console.log(obj3); // output ========> { a: 1, b: 2, c: 3 }
+```
+
+### 25. Difference between async and defer
+async and defer are the attributes used with the script tag in HTML to load javaScript files.
+
+**Async** - The script is loaded in parallel to the HTML parsing, and executed as soon as it is available i.e., it executes the script immediately after it is loaded. It can be useful for scripts that don't depend on the DOM. 
+
+**Defer** - The script is loaded in parallel to the HTML parsing, and executed after the page is completely loaded i.e., it waits until the page has finished parsing. It can be useful for scripts that depend on the DOM. 
+
+### 26. What is Nullish coalescing operator
+1. The nullish coalescing (??) operator is a logical operator
+2. It allows you to check if a value is either null or undefined
+3. It returns its right-hand side operand if its left-hand side operand is null or undefined, otherwise returns its left-hand side operand
+```js
+console.log((null || undefined) ?? "foo"); // output ========>  "foo"
+console.log("hello" ?? "foo");		   // output ========>  "hello" 
+```
+
+### 27. What is the difference between a parameter and an argument
+**Parameter** - A parameter is a variable that is defined during a function declaration or definition. It represents a value that the function or method expects to receive as an input.
+
+**Argument** - An argument is the actual value that is passed to a function or method when it is called. 
+```js
+function Demo(parameter1, parameter2){
+ something------
+ something------
+}
+Demo(argument1, argument2);
+```
+
+### 28. What is a closure
+A closure is a combination of a function and the environment in which it was created(lexical scope). It gives you access to an outer function's scope from an inner function even if the outer function has returned
+```js
+function Demo() {
+  let name = "Surbhi";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const result = Demo();
+result();
+```
+
+### 29. Difference between function declaration and function expression
+**Function Declaration**
+1. A function declaration defines a function using the function keyword, followed by the function name
+2. We can call a function, declared using a function declaration, before it is defined. Because it is hoisted to the top of its scope
+3. It does not require a variable assignment 
+```js
+function Message() {
+  console.log("Welcome Message"); // output ========> Welcome Message
+}
+Message();
+```
+
+**Function Expression**
+1. A function Expression is similar to a function declaration without the function name
+2. We can not call a function, declared using a function expression, before it is defined
+3. It can be stored in a variable assignment
+```js
+const Message = function() {
+  console.log("Welcome Message"); // output ========> Welcome Message
+}
+Message();
+```
 
 ******************************In progress
 
