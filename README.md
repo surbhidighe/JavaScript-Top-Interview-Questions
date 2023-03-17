@@ -35,7 +35,11 @@ Top JavaScript interview questions
 | 27 | [What is the difference between a parameter and an argument](#27-what-is-the-difference-between-a-parameter-and-an-argument)  |
 | 28 | [What is a closure](#28-what-is-a-closure)  |
 | 29 | [Difference between function declaration and function expression](#29-difference-between-function-declaration-and-function-expression)  |
-
+| 30 | [What are the different ways to create an array in javascript](#30-what-are-the-different-ways-to-create-an-array-in-javascript)  |
+| 31 | [Difference between window and document in javascript](#31-difference-between-window-and-document-in-javascript)  |
+| 32 | [What is strict mode in javaScript](#32-what-is-strict-mode-in-javascript)  |
+| 33 | [What are the different ways to empty an array in javascript](#33-what-are-the-different-ways-to-empty-an-array-in-javascript)  |
+| 34 | [What is NaN in javascript](#34-what-is-nan-in-javascript)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -445,6 +449,62 @@ const Message = function() {
 Message();
 ```
 
+### 30. What are the different ways to create an array in javascript
+1. **Using the array literal notation**
+```js
+const arr = [1,2,3,4,5];
+```
+2. **Using the Array() constructor**
+```js
+const arr = new Array(1, 2, 3, 4, 5);
+```
+
+### 31. Difference between window and document in javascript
+**window object** - window is the topmost object. It represents the browser window or tab containing a DOM document. It provides various properties and methods to manipulate the browser window, such as window.alert(), window.confirm(), and window.location. 
+
+**document object** - document represents the HTML document that is being displayed in the window. It provides properties and methods to manipulate the HTML elements in the document, such as document.title, document.getElementById(), and document.createElement().
+
+### 32. What is strict mode in JavaScript
+1. Strict mode was introduced in ECMAScript 5
+2. It performs additional checks on your code to prevent certain types of bugs and errors that may go unnoticed e.g., using undeclared variables, using duplicate property names in objects
+3. It can be enabled at either the global level or at the function level
+4. It can't be apply to block statements enclosed in {} braces
+5. To invoke strict mode, put the exact statement “use strict”; or ‘use strict’; 
+
+### 33. What are the different ways to empty an array in javaScript
+**Using length property**
+```js
+let arr = [1, 2, 3, 4, 5];
+arr.length = 0;
+console.log(arr); // output ========> []
+```
+
+**Assigning it to a new empty array**
+```js
+let arr = [1,2,3,4,5];
+arr = [];
+console.log(arr); // output ========> []
+```
+
+**Using the splice() method**
+```js
+let arr = [1, 2, 3, 4, 5];
+arr.splice(0, arr.length);
+console.log(arr); // output ========> []
+```
+
+### 34. What is NaN in javascript
+1. In Javascript, NaN stands for "Not a Number"
+2. It is a global property that represents an unrepresentable mathematical result
+3. It is returned when a mathematical operation has no meaningful result. E.g., dividing zero by zero, multiplying/dividing a non-numeric value by a number etc.
+
+```js
+console.log(0/0);                  // output ========> NaN
+console.log("a"*1);                // output ========> NaN
+console.log("a"/1)		   // output ========> NaN
+console.log(Math.sqrt(-1));	   // output ========> NaN
+console.log(parseInt("blabla"));   // output ========> NaN
+```
 ******************************In progress
 
 
