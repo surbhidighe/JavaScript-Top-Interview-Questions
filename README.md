@@ -40,6 +40,9 @@ Top JavaScript interview questions
 | 32 | [What is strict mode in javaScript](#32-what-is-strict-mode-in-javascript)  |
 | 33 | [What are the different ways to empty an array in javascript](#33-what-are-the-different-ways-to-empty-an-array-in-javascript)  |
 | 34 | [What is NaN in javascript](#34-what-is-nan-in-javascript)  |
+| 35 | [Javascript naming convention](#35-javascript-naming-convention)  |
+| 36 | [Difference between call(), apply() and bind()](difference-between-call-apply-and-bind)  |
+
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -504,6 +507,69 @@ console.log("a"*1);                // output ========> NaN
 console.log("a"/1)		   // output ========> NaN
 console.log(Math.sqrt(-1));	   // output ========> NaN
 console.log(parseInt("blabla"));   // output ========> NaN
+```
+
+### 35. Javascript naming convention
+1. Use camelCase (lowercase for the first word, then uppercase for subsequent words) for variable and function names
+2. Use PascalCase for class names (uppercase for the first letter of each word)
+3. Use "is" or "has" as prefixes for boolean variables
+4. Use UPPERCASE for constants 
+5. Use descriptive and meaningful names for your variables, functions, and classes.
+
+```js
+//variable
+let firstName = "Surbhi";
+
+//function
+function displayName() {
+ return "Surbhi Dighe";
+}
+displayName();
+
+//boolean
+let isLoading = false;
+let hasName = true;
+
+//constants
+let SECONDS = 60;
+
+//class
+class DisplayName { 
+  constructor(firstName, lastName) { 
+    this.firstName = firstName; 
+    this.lastName = lastName; 
+  }
+}
+var name = new DisplayName('Surbhi', 'Dighe');
+```
+
+### 36. Difference between call(), apply() and bind()
+call(), apply(), and bind() methods are used to attach a function into an object and call the function as if it belonged to that object. 
+
+**call()**  - call() is used to invoke a function immediately with a specified *this* value and allows you to pass the arguments one by one
+```js
+let person = {name: 'Surbhi'};
+function printName(message) {
+    console.log(message + ' ' + this.name);   // output ========> "Hello Surbhi"
+}
+printName.call(person, 'Hello'); 
+```
+**apply()** - apply() is used to invoke a function immediately with a specified *this* value and allows you to pass the arguments as an array
+```js
+let person = {name: 'Surbhi'};
+function printName(message) {
+    console.log(message + ' ' + this.name);   // output ========> "Hello Surbhi"
+}
+printName.apply(person, ['Hello']); 
+```
+**bind()** - bind() returns a new function (which can be invoked anytime), with a specified *this* value and allows you to pass in arguments
+```js
+let person = {name: 'Surbhi'};
+function printName(message) {
+    console.log(message + ' ' + this.name);   // output ========> "Hello Surbhi"
+}
+let sayHello = printName.bind(person, "Hello"); 
+sayHello();
 ```
 ******************************In progress
 
