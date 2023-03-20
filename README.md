@@ -49,6 +49,13 @@ Top JavaScript interview questions
 | 41 | [Is JavaScript case-sensitive](#41-is-javascript-case-sensitive)  |
 | 42 | [Difference between push() and unshift()](#42-difference-between-push-and-unshift)  |
 | 43 | [Difference between pop() and shift()](#43-difference-between-pop-and-shift)  |
+| 44 | [Different ways to access DOM elements in js](#44-different-ways-to-access-dom-elements-in-js)  |
+| 45 | [What are promises](#45-what-are-promises)  |
+| 46 | [What is a prototype](#46-what-is-a-prototype)  |
+| 47 | [What is a callback hell](#47-what-is-a-callback-hell)  |
+| 48 | [What is an event loop](#48-what-is-an-event-loop)  |
+| 49 | [ES6 and its features](#49-es6-and-its-features)  |
+| 50 | [Difference between function and method](#50-difference-between-function-and-method)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -663,6 +670,107 @@ let arr = [1,2,3,4];
 let newArr = arr.shift();
 console.log(newArr);		// output ========> 1
 console.log(arr);		// output ========> [2,3,4]
+```
+
+### 44. Different ways to access DOM elements in js
+*getElementById* - This method is used to get an element by its ID.
+
+*getElementsByClassName* - This method is used to get a collection of elements by their class name.
+
+*getElementsByTagName* - This method is used to get a collection of elements by their tag name.
+
+*querySelector* - This method is used to get the first element that matches a specified CSS selector.
+
+*querySelectorAll* - This method is used to get a collection of elements that match a specified CSS selector.
+
+### 45. What are promises
+In JavaScript, promises are used to handle asynchronous operations. The code does not directly or immediately return a value. Instead, it returns a promise that, it will eventually get resolved or rejected. 
+A promise can have three possible states:
+
+*Pending* - The initial state, before the promise is resolved or rejected.
+
+*Resolved* - When a promise has been successfully completed and a value is returned.
+
+*Rejected* - When a promise has been failed and an error is returned.
+
+```js
+let promise = new Promise((resolve, reject) => {
+  const result = AsynchronousTaskFunction();
+  if (result) {
+    resolve(result);
+  } else {
+    reject(new Error('Operation failed'));
+  }
+});
+
+promise.then(result => {
+  console.log(result, "It is resolved");
+}).catch(error => {
+  console.error(error, "It is rejected");
+});
+```
+
+### 46. What is a prototype
+Every object in JavaScript has a built-in property, which is called its prototype. All JavaScript objects inherit properties and methods from a prototype.
+
+It allows us to add properties and methods to all instances of a given object type.
+```js
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+Person.prototype.city = "Indore"
+var person1 = new Person('John', 30);
+console.log(person1);			
+```
+
+### 47. What is a callback hell
+Callback hell is a situation in which callback functions are nested inside each other at several levels, making the code difficult to read, write, and maintain.
+```js
+asyncFunc1(function(response1) {
+  asyncFunc2(response1, function(response2) {
+    asyncFunc3(response2, function(response3) {
+      asyncFunc4(response3, function(response4) {
+       asyncFunc5(response4, function(response5) {
+        // ... and so on
+        });
+      });
+    });
+  });
+});
+```
+
+### 48. What is an event loop
+The event loop is a key mechanism in JavaScript that provides an illusion of being multithreaded despite being single-threaded, allowing for non-blocking, asynchronous processing of events and callbacks.It monitors both the callback queue and the call stack. 
+
+If the call stack is not empty, the event loop waits until it is empty 
+
+If the call stack is empty it places the next function from the callback queue to the call stack
+
+
+### 49. ES6 and its features
+ES6 stands for ECMAScript 6, also known as ECMAScript 2015. It is the sixth major version of the ECMAScript language specification for JavaScript. Below are some of the significant features of ES6
+
+*Arrow functions, template literals, block-scoped variables (let and const), default function parameters, array and object destructing, promises, rest and spread operators, classes.*
+
+### 50. Difference between function and method
+**method** - A method is a function associated with an object. 
+```js
+let obj = {
+name:"Surbhi",
+greet: function(){     
+return `Hi ${this.name}`
+}
+}
+console.log(obj.greet());
+```
+**function** - A function is a self-contained block of code that can be defined and called independently of any object.
+```js
+function sum(a, b) {
+  return a + b;
+}
+sum(2,4);
 ```
 ******************************In progress
 
