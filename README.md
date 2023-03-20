@@ -56,6 +56,8 @@ Top JavaScript interview questions
 | 48 | [What is an event loop](#48-what-is-an-event-loop)  |
 | 49 | [ES6 and its features](#49-es6-and-its-features)  |
 | 50 | [Difference between function and method](#50-difference-between-function-and-method)  |
+| 51 | [What is aync and await](#51-what-is-aync-and-await)  |
+
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -772,6 +774,18 @@ function sum(a, b) {
 }
 sum(2,4);
 ```
-******************************In progress
+
+### 51. What is aync and await
+async/await is a feature in JavaScript that allows us to write asynchronous code that looks more like synchronous code. "await" works only inside "async" functions
+
+"async" ensures that a function returns a promise and "await" pause the execution of the function until a promise is resolved or rejected. 
+```js
+const getData = async () => {
+  const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=New%20York&appid=YOUR_API_KEY');
+  const data = await response.json();
+  console.log(data);
+}
+getData();
+```
 
 
