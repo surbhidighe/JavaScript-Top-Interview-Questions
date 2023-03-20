@@ -47,6 +47,8 @@ Top JavaScript interview questions
 | 39 | [How do we add comments in javascript](#39-how-do-we-add-comments-in-javascript)  |
 | 40 | [What is the use of typeof operator](#40-what-is-the-use-of-typeof-operator)  |
 | 41 | [Is JavaScript case-sensitive](#41-is-javascript-case-sensitive)  |
+| 42 | [Difference between push() and unshift()](#42-difference-between-push-and-unshift)  |
+| 43 | [Difference between pop() and shift()](#43-difference-between-pop-and-shift)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -624,6 +626,43 @@ Yes, JavaScript is a case-sensitive language. For e.g., the variables firstName 
 ```js
 let firstName = "Surbhi";
 console.log(firstname);         // output ========> Uncaught ReferenceError: firstname is not defined
+```
+
+### 42. Difference between push() and unshift()
+Both are used to add elements to an array, but they add elements in different ways.
+
+**push()** - It adds one or more elements to the end of an array and returns the new length of the array.
+```js
+let arr = [1,2,3,4];
+let newArr = arr.push(5,6,7);
+console.log(newArr); 		// output ========> 7
+console.log(arr);		// output ========> [1, 2, 3, 4, 5, 6, 7]
+```
+**unshift()** - It adds one or more elements to the beginning of an array and returns the new length of the array.
+```js
+let arr = [1,2,3,4];
+let newArr = arr.unshift(5,6,7);
+console.log(newArr);		// output ========> 7
+console.log(arr);		// output ========> [5, 6, 7, 1, 2, 3, 4]
+```
+
+### 43. Difference between pop() and shift()
+Both are used to remove elements from an array, but they remove elements in different ways.
+
+**pop()** - It removes the last element of an array and returns the removed element.
+```js
+let arr = [1,2,3,4];
+let newArr = arr.pop();
+console.log(newArr);		// output ========> 4
+console.log(arr);		// output ========> [1,2,3]
+```
+
+**shift()** - It removes the first element of an array and returns the removed element.
+```js
+let arr = [1,2,3,4];
+let newArr = arr.shift();
+console.log(newArr);		// output ========> 1
+console.log(arr);		// output ========> [2,3,4]
 ```
 ******************************In progress
 
