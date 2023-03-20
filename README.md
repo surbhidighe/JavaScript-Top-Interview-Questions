@@ -41,8 +41,12 @@ Top JavaScript interview questions
 | 33 | [What are the different ways to empty an array in javascript](#33-what-are-the-different-ways-to-empty-an-array-in-javascript)  |
 | 34 | [What is NaN in javascript](#34-what-is-nan-in-javascript)  |
 | 35 | [Javascript naming convention](#35-javascript-naming-convention)  |
-| 36 | [Difference between call(), apply() and bind()](difference-between-call-apply-and-bind)  |
-
+| 36 | [Difference between call(), apply() and bind()](#36-difference-between-call-apply-and-bind)  |
+| 37 | [What is the use of isNaN function](#37-what-is-the-use-of-isnan-function)  |
+| 38 | [What is 'this' keyword in javascript](#38-what-is-this-keyword-in-javascript)  |
+| 39 | [How do we add comments in javascript](#39-how-do-we-add-comments-in-javascript)  |
+| 40 | [What is the use of typeof operator](#40-what-is-the-use-of-typeof-operator)  |
+| 41 | [Is JavaScript case-sensitive](#41-is-javascript-case-sensitive)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -570,6 +574,56 @@ function printName(message) {
 }
 let sayHello = printName.bind(person, "Hello"); 
 sayHello();
+```
+
+### 37. What is the use of isNaN function
+isNaN() is a built-in JavaScript function. It takes a single argument and returns true if the argument is not a number, otherwise it returns false.
+```js
+let num1 = 5;
+let num2 = "hi";
+
+console.log(isNaN(num1));	// output ========> false
+console.log(isNaN(num2));	// output ========> true
+```
+
+### 38. What is 'this' keyword in javascript
+The value of 'this' is determined by the context in which it is used. In general, 'this' keyword refers to the object it belongs to.
+The 'this' keyword in JavaScript can have different values depending on where it is used -
+1. If it is used inside a method, then it refers to the object that it belongs to
+2. If it is used inside any function or alone (i.e outside any function or method), then it referes to the global object
+3. If it is used in the context of an event handler, such as a click event, then it refers to the element that triggered the event
+
+### 39. How do we add comments in javascript
+**Single-line comments** - Add comments using 2 forward slashes // 
+```js
+// this is a single line comment
+```
+**Multi-line comments** - Enclose the text between /* and */
+```js
+/*
+This is a
+multiline comment
+example
+*/
+```
+
+### 40. What is the use of typeof operator
+The typeof operator returns a string that indicates the data type of the variable/value.
+```js
+let var1 = "Surbhi";
+let var2 = 10;
+console.log(typeof var1);	// output ========> "string"
+console.log(typeof var2);       // output ========> "number"
+console.log(typeof "hello");	// output ========> "string"
+console.log(typeof 2);		// output ========> "number"
+console.log(typeof true);	// output ========> "boolean"
+```
+
+### 41. Is JavaScript case-sensitive
+Yes, JavaScript is a case-sensitive language. For e.g., the variables firstName and firstname are considered to be two different variables.
+```js
+let firstName = "Surbhi";
+console.log(firstname);         // output ========> Uncaught ReferenceError: firstname is not defined
 ```
 ******************************In progress
 
