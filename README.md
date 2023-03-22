@@ -57,6 +57,8 @@ Top JavaScript interview questions
 | 49 | [ES6 and its features](#49-es6-and-its-features)  |
 | 50 | [Difference between function and method](#50-difference-between-function-and-method)  |
 | 51 | [What is aync and await](#51-what-is-aync-and-await)  |
+| 52 | [What is the role of event.preventDefault()](#52-what-is-the-role-of-eventpreventdefault)  |
+| 53 | [What is the use of JSON.stringify()](#53-what-is-the-use-of-jsonstringify)  |
 
 
 ### 1. What is JavaScript
@@ -788,4 +790,15 @@ const getData = async () => {
 getData();
 ```
 
+### 52. What is the role of event.preventDefault()
+The preventDefault() method is used to stop the default action of an element.
 
+E.g., when a user submits a form, the browser sends the form data to the URL specified in the action attribute. In some cases, we may want to prevent this default behavior.
+
+### 53. What is the use of JSON.stringify()
+JSON.stringify() method is used to convert a JavaScript object or value into an equivalent JSON string. 
+```js
+const obj = { firstname: "Surbhi", lastname: "Dighe" };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString); // output ========> {"firstname":"Surbhi","lastname":"Dighe"}
+```
