@@ -59,6 +59,10 @@ Top JavaScript interview questions
 | 51 | [What is aync and await](#51-what-is-aync-and-await)  |
 | 52 | [What is the role of event.preventDefault()](#52-what-is-the-role-of-eventpreventdefault)  |
 | 53 | [What is the use of JSON.stringify()](#53-what-is-the-use-of-jsonstringify)  |
+| 54 | [How can you stop the setTimeout](#54-how-can-you-stop-the-settimeout)  |
+| 55 | [If Javascript is single threaded, how it supports asynchronous operations](#55-if-javascript-is-single-threaded-how-it-supports-asynchronous-operations)  |
+| 56 | [What is javascript scope](#56-what-is-javascript-scope)  |
+| 57 | [Difference between global scope and local scope](#57-difference-between-global-scope-and-local-scope)  |
 
 
 ### 1. What is JavaScript
@@ -801,4 +805,42 @@ JSON.stringify() method is used to convert a JavaScript object or value into an 
 const obj = { firstname: "Surbhi", lastname: "Dighe" };
 const jsonString = JSON.stringify(obj);
 console.log(jsonString); // output ========> {"firstname":"Surbhi","lastname":"Dighe"}
+```
+
+### 54. How can you stop the setTimeout
+You can use the clearTimeout method. This method takes the id returned by setTimeout and cancels the timer.
+```js
+const timerId = setTimeout(() => {
+  console.log('setTimeout is done');
+}, 5000);
+clearTimeout(timerId);
+```
+
+### 55. If Javascript is single threaded, how it supports asynchronous operations
+JavaScript is single-threaded, means it can execute only one task at a time. Still, it supports asynchronous operations using the Web API provided by the browser.
+
+
+### 56. What is javascript scope
+In JavaScript, scope refers to the current context of your code. This context determines visibility and accessibility of variables, functions, and objects within a certain part of the code.
+Generally, there are two types of scope in JavaScript - global scope and local scope.
+
+### 57. Difference between global scope and local scope
+**Global scope** - Global scope refers to the variables, functions, and objects that are defined outside of any function or block. They can be accessible from any part of the code.
+```js
+let name = "Surbhi";
+function printName() {
+  console.log(name);  		// output ========> Surbhi
+}
+printName();
+```
+
+**Local scope** - Local scope refers to the variables, functions, and objects that are defined inside any function or block. They can be accessible only within the function or block where they are defined.
+```js
+function printName() {
+  let name = "Surbhi;
+  console.log(name); 		// output ========> Surbhi
+}
+printName();
+console.log(name); 		// ReferenceError: name is not defined
+
 ```
