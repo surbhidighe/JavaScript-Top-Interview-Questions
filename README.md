@@ -1,8 +1,7 @@
-# JavaScript-Interview-Questions-
-Top JavaScript interview questions
+## JavaScript interview questions 
 
-******************************In progress
 
+### :writing_hand: ----- In Progress ----- :writing_hand:
 
 | S.No  | Questions |
 | ------------- | ------------- |
@@ -69,10 +68,15 @@ Top JavaScript interview questions
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
 * JavaScript is basically a client-side scripting language but it can also be used on the server-side with the help of technologies such as Node.js.
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 ### 2. What are the different data types in JavaScript
 | Primitive   |Non-primitive |
 | ------------- | ------------- |
 | Boolean, NULL, undefined, BigInt, String, Number, Symbol  | Object, Array | 
+
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 3. What are the different ways to create an Object in JavaScript
 
@@ -119,6 +123,8 @@ let person = new Person('Surbhi');
 console.log(person.name);  //output - Surbhi
 ```
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 ### 4. Difference between “==” and “===” operators
 * == : While comparing two operands, checks for only value
 ```js
@@ -129,8 +135,12 @@ console.log(1=="1");  // output=>>>>>>>>> true
 console.log(1==="1");  // output=>>>>>>>>> false
 ```
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 ### 5. Is javascript single-threaded or multi-threaded
 * JavaScript is Single-threaded
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 6. What are arrow functions and its features
 Arrow functions were introduced in ES6 (ECMAScript 2015) and provide a simpler and compact way to write functions. They are also called “fat arrow functions”
@@ -147,8 +157,12 @@ const functionName = (something) => {
 4. If the arrow function body consists of a single expression, that expression will be implicitly returned, without the need for a return statement.
 5. If an arrow function has only one parameter, the parentheses around the parameter list can be omitted.
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 ### 7. What do you mean by Synthetic events
 Synthetic events are objects that act as a cross-browser wrapper around a browser's native event. It has the same interface as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 8. What is array destructuring
 Array destructuring is a unique feature in JavaScript that allows you to extract array's value into new variables. For e.g.,
@@ -159,6 +173,7 @@ console.log(num1); // output =====> 1
 console.log(num2); // output =====> 2
 console.log(num3); // output =====> 3
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 9. Can we combine two arrays using any es6 operators
 * Yes, using Spread Operators
@@ -169,12 +184,15 @@ const arr3 = [...arr1, ...arr2]
 console.log(arr3) // output =====> [1,2,3,4,5,6]
 ```
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 ### 10. Why javascript is dynamically typed language
 JavaScript is a dynamically typed language, because the type of a variable is determined at runtime based on the value it holds. For e.g.,
 ```javascript
 var variable_one = "surbhi"  // "string" datatype is determined at runtime
 var variable_two = 20        // "number" datatype is determined at runtime
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 11. Difference between Undeclared and Undefined
 **Undeclared -** A variable that has not been declared or doesn't exists in the code
@@ -186,6 +204,7 @@ console.log(a); // output =====> ReferenceError: a is not defined
 let a;
 console.log(a); // output =====> undefined
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 12. Difference between Null and Undefined
 **Null -** Null means an empty value or a blank value. It is used to represent an intentional absence of value. 
@@ -199,6 +218,7 @@ console.log(demo); // output =====> null
 let demo;
 console.log(demo); // output =====> undefined
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 13. What is Temporal Dead Zone
 A "let" or "const" variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared and initialized.
@@ -211,6 +231,7 @@ In JavaScript, variables declared with let or const are not hoisted to the top o
   let name = "surbhi"; // End of TDZ for name
 }
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 14. What is IIFE
 IIFE stands for Immediately Invoked Function Expression. It is a JavaScript function that is executed as soon as it is defined. 
@@ -221,6 +242,7 @@ An IIFE is typically written as an anonymous function expression that is enclose
   // code goes here
 })();
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 15. What is Hoisting
 Hoisting is a default behavior in JavaScript where variable and function declarations are moved to the top of the current scope
@@ -252,6 +274,7 @@ The output of above code will be "demo console" because the function declaration
 + Only function declarations are hoisted, not the function expressions.
 + Only the declaration is hoisted, not the initialization. 
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 16. What are Cookies
 In javascript, a cookie is a piece of data, stored in small text files, on the user's computer by the browser.
@@ -267,6 +290,7 @@ let cookie_variable = document.cookie;
 //**Delete a cookie** (set the expiration date to a past date/time)
 document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 17. What is memoization
 Memoization is a technique used in JavaScript to optimize the performance of functions by caching the results of expensive function calls, based on their input parameters.
@@ -293,6 +317,7 @@ const add = memoizedAdd();
 console.log(add(2, 3)); // "Calculating result:", "2 and 3", output ========> 5
 console.log(add(2, 3)); // "Retrieving from cache:", "2 and 3" output ========> 5
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 18. Difference between var, let and const
 In javascript, there are 3 ways to declare a variable - var, let, and const. However, they have some differences in their behavior and scope.
@@ -303,6 +328,8 @@ In javascript, there are 3 ways to declare a variable - var, let, and const. How
 | Can be updated in the same scope | Can be updated in the same scope | Can not be updated in the same scope |
 | Hoisted to the top of their scope | Hoisted to the top but are not initialized | Hoisted to the top but are not initialized |
 | Can be declared without being initialized |Can be declared without being initialized | Can not be declared without being initialized |
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 19. What is a callback function
 A callback function is a function that is passed as an argument to another function. The function that receives the callback as an argument can then invoke the callback at any time during its execution. 
@@ -318,6 +345,7 @@ function callBackFun() {
 // passing callback function as an argument to message function
 message(callBackFun);
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 20. Is it possible to have both local and global variables with the same name
 Yes, we can have both with the same name. But when we do this, the local variable will take precedence over the global variable within the scope of the function or block of code in which it is declared.
@@ -333,6 +361,7 @@ console.log(a, "local scope");
 Demo();
 console.log(a, "global scope");
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 21. Difference between Local Storage and Session Storage
 Local storage and session storage are web storage provided by web browsers to store data on the client-side
@@ -340,6 +369,8 @@ Local storage and session storage are web storage provided by web browsers to st
 **Local Storage** - Data stored in local storage will persist even after the browser window is closed or the user navigates away from the website and it is available across all windows and tabs of the same origin.
 
 **Session Storage** - Data stored in session storage will be deleted when the browser window is closed or the session ends and it is available only within the same window or tab that created the data.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 22. Difference between forEach() and map()
 map() and forEach() are array methods that can be used to iterate over an array.
@@ -364,6 +395,7 @@ const arr = [1,2,3,4,5]
 let result = arr.forEach(x => x * x)
 console.log(result)   // output ========> undefined
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 23. What is rest operator
 1. The rest operator was introduced in ES6 (ECMAScript 2015) and it is represented by three dots (...)
@@ -384,6 +416,7 @@ function profile(name, designation,...location) {
 }
 console.log(profile("surbhi","SE","India","Indore","M.P")); // output ========> ["India", "Indore", "M.P"]
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 24. What is spread operator
 1. The spread operator was introduced in ES6 (ECMAScript 2015) and it is represented by three dots (...)
@@ -406,6 +439,7 @@ const obj2 = { c:3 };
 const obj3 = { ...obj1, ...obj2 }; 
 console.log(obj3); // output ========> { a: 1, b: 2, c: 3 }
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 25. Difference between async and defer
 async and defer are the attributes used with the script tag in HTML to load javaScript files.
@@ -413,6 +447,8 @@ async and defer are the attributes used with the script tag in HTML to load java
 **Async** - The script is loaded in parallel to the HTML parsing, and executed as soon as it is available i.e., it executes the script immediately after it is loaded. It can be useful for scripts that don't depend on the DOM. 
 
 **Defer** - The script is loaded in parallel to the HTML parsing, and executed after the page is completely loaded i.e., it waits until the page has finished parsing. It can be useful for scripts that depend on the DOM. 
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 26. What is Nullish coalescing operator
 1. The nullish coalescing (??) operator is a logical operator
@@ -422,6 +458,7 @@ async and defer are the attributes used with the script tag in HTML to load java
 console.log((null || undefined) ?? "foo"); // output ========>  "foo"
 console.log("hello" ?? "foo");		   // output ========>  "hello" 
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 27. What is the difference between a parameter and an argument
 **Parameter** - A parameter is a variable that is defined during a function declaration or definition. It represents a value that the function or method expects to receive as an input.
@@ -434,6 +471,7 @@ function Demo(parameter1, parameter2){
 }
 Demo(argument1, argument2);
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 28. What is a closure
 A closure is a combination of a function and the environment in which it was created(lexical scope). It gives you access to an outer function's scope from an inner function even if the outer function has returned
@@ -449,6 +487,7 @@ function Demo() {
 const result = Demo();
 result();
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 29. Difference between function declaration and function expression
 **Function Declaration**
@@ -472,6 +511,7 @@ const Message = function() {
 }
 Message();
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 30. What are the different ways to create an array in javascript
 1. **Using the array literal notation**
@@ -482,11 +522,14 @@ const arr = [1,2,3,4,5];
 ```js
 const arr = new Array(1, 2, 3, 4, 5);
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 31. Difference between window and document in javascript
 **window object** - window is the topmost object. It represents the browser window or tab containing a DOM document. It provides various properties and methods to manipulate the browser window, such as window.alert(), window.confirm(), and window.location. 
 
 **document object** - document represents the HTML document that is being displayed in the window. It provides properties and methods to manipulate the HTML elements in the document, such as document.title, document.getElementById(), and document.createElement().
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 32. What is strict mode in JavaScript
 1. Strict mode was introduced in ECMAScript 5
@@ -494,6 +537,8 @@ const arr = new Array(1, 2, 3, 4, 5);
 3. It can be enabled at either the global level or at the function level
 4. It can't be apply to block statements enclosed in {} braces
 5. To invoke strict mode, put the exact statement “use strict”; or ‘use strict’; 
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 33. What are the different ways to empty an array in javaScript
 **Using length property**
@@ -516,6 +561,7 @@ let arr = [1, 2, 3, 4, 5];
 arr.splice(0, arr.length);
 console.log(arr); // output ========> []
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 34. What is NaN in javascript
 1. In Javascript, NaN stands for "Not a Number"
@@ -529,6 +575,7 @@ console.log("a"/1)		   // output ========> NaN
 console.log(Math.sqrt(-1));	   // output ========> NaN
 console.log(parseInt("blabla"));   // output ========> NaN
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 35. Javascript naming convention
 1. Use camelCase (lowercase for the first word, then uppercase for subsequent words) for variable and function names
@@ -563,6 +610,7 @@ class DisplayName {
 }
 var name = new DisplayName('Surbhi', 'Dighe');
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 36. Difference between call(), apply() and bind()
 call(), apply(), and bind() methods are used to attach a function into an object and call the function as if it belonged to that object. 
@@ -592,6 +640,7 @@ function printName(message) {
 let sayHello = printName.bind(person, "Hello"); 
 sayHello();
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 37. What is the use of isNaN function
 isNaN() is a built-in JavaScript function. It takes a single argument and returns true if the argument is not a number, otherwise it returns false.
@@ -602,6 +651,7 @@ let num2 = "hi";
 console.log(isNaN(num1));	// output ========> false
 console.log(isNaN(num2));	// output ========> true
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 38. What is 'this' keyword in javascript
 The value of 'this' is determined by the context in which it is used. In general, 'this' keyword refers to the object it belongs to.
@@ -609,6 +659,8 @@ The 'this' keyword in JavaScript can have different values depending on where it
 1. If it is used inside a method, then it refers to the object that it belongs to
 2. If it is used inside any function or alone (i.e outside any function or method), then it referes to the global object
 3. If it is used in the context of an event handler, such as a click event, then it refers to the element that triggered the event
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 39. How do we add comments in javascript
 **Single-line comments** - Add comments using 2 forward slashes // 
@@ -623,6 +675,7 @@ multiline comment
 example
 */
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 40. What is the use of typeof operator
 The typeof operator returns a string that indicates the data type of the variable/value.
@@ -635,6 +688,7 @@ console.log(typeof "hello");	// output ========> "string"
 console.log(typeof 2);		// output ========> "number"
 console.log(typeof true);	// output ========> "boolean"
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 41. Is JavaScript case-sensitive
 Yes, JavaScript is a case-sensitive language. For e.g., the variables firstName and firstname are considered to be two different variables.
@@ -642,6 +696,7 @@ Yes, JavaScript is a case-sensitive language. For e.g., the variables firstName 
 let firstName = "Surbhi";
 console.log(firstname);         // output ========> Uncaught ReferenceError: firstname is not defined
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 42. Difference between push() and unshift()
 Both are used to add elements to an array, but they add elements in different ways.
@@ -660,6 +715,7 @@ let newArr = arr.unshift(5,6,7);
 console.log(newArr);		// output ========> 7
 console.log(arr);		// output ========> [5, 6, 7, 1, 2, 3, 4]
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 43. Difference between pop() and shift()
 Both are used to remove elements from an array, but they remove elements in different ways.
@@ -679,6 +735,7 @@ let newArr = arr.shift();
 console.log(newArr);		// output ========> 1
 console.log(arr);		// output ========> [2,3,4]
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 44. Different ways to access DOM elements in js
 *getElementById* - This method is used to get an element by its ID.
@@ -690,6 +747,8 @@ console.log(arr);		// output ========> [2,3,4]
 *querySelector* - This method is used to get the first element that matches a specified CSS selector.
 
 *querySelectorAll* - This method is used to get a collection of elements that match a specified CSS selector.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 45. What are promises
 In JavaScript, promises are used to handle asynchronous operations. The code does not directly or immediately return a value. Instead, it returns a promise that, it will eventually get resolved or rejected. 
@@ -717,6 +776,7 @@ promise.then(result => {
   console.error(error, "It is rejected");
 });
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 46. What is a prototype
 Every object in JavaScript has a built-in property, which is called its prototype. All JavaScript objects inherit properties and methods from a prototype.
@@ -732,6 +792,7 @@ Person.prototype.city = "Indore"
 var person1 = new Person('John', 30);
 console.log(person1);			
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 47. What is a callback hell
 Callback hell is a situation in which callback functions are nested inside each other at several levels, making the code difficult to read, write, and maintain.
@@ -748,6 +809,7 @@ asyncFunc1(function(response1) {
   });
 });
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 48. What is an event loop
 The event loop is a key mechanism in JavaScript that provides an illusion of being multithreaded despite being single-threaded, allowing for non-blocking, asynchronous processing of events and callbacks.It monitors both the callback queue and the call stack. 
@@ -756,11 +818,14 @@ If the call stack is not empty, the event loop waits until it is empty
 
 If the call stack is empty it places the next function from the callback queue to the call stack
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 49. ES6 and its features
 ES6 stands for ECMAScript 6, also known as ECMAScript 2015. It is the sixth major version of the ECMAScript language specification for JavaScript. Below are some of the significant features of ES6
 
 *Arrow functions, template literals, block-scoped variables (let and const), default function parameters, array and object destructing, promises, rest and spread operators, classes.*
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 50. Difference between function and method
 **method** - A method is a function associated with an object. 
@@ -780,6 +845,7 @@ function sum(a, b) {
 }
 sum(2,4);
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 51. What is aync and await
 async/await is a feature in JavaScript that allows us to write asynchronous code that looks more like synchronous code. "await" works only inside "async" functions
@@ -793,11 +859,14 @@ const getData = async () => {
 }
 getData();
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 52. What is the role of event.preventDefault()
 The preventDefault() method is used to stop the default action of an element.
 
 E.g., when a user submits a form, the browser sends the form data to the URL specified in the action attribute. In some cases, we may want to prevent this default behavior.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 53. What is the use of JSON.stringify()
 JSON.stringify() method is used to convert a JavaScript object or value into an equivalent JSON string. 
@@ -806,6 +875,7 @@ const obj = { firstname: "Surbhi", lastname: "Dighe" };
 const jsonString = JSON.stringify(obj);
 console.log(jsonString); // output ========> {"firstname":"Surbhi","lastname":"Dighe"}
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 54. How can you stop the setTimeout
 You can use the clearTimeout method. This method takes the id returned by setTimeout and cancels the timer.
@@ -815,14 +885,18 @@ const timerId = setTimeout(() => {
 }, 5000);
 clearTimeout(timerId);
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 55. If Javascript is single threaded, how it supports asynchronous operations
 JavaScript is single-threaded, means it can execute only one task at a time. Still, it supports asynchronous operations using the Web API provided by the browser.
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 56. What is javascript scope
 In JavaScript, scope refers to the current context of your code. This context determines visibility and accessibility of variables, functions, and objects within a certain part of the code.
 Generally, there are two types of scope in JavaScript - global scope and local scope.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 57. Difference between global scope and local scope
 **Global scope** - Global scope refers to the variables, functions, and objects that are defined outside of any function or block. They can be accessible from any part of the code.
@@ -842,5 +916,132 @@ function printName() {
 }
 printName();
 console.log(name); 		// ReferenceError: name is not defined
-
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+## Output Based Questions
+
+**1. What will be the output**
+```js
+let arr = [1,2,3,4,5,-6,7];
+arr.length =0;
+console.log(arr);
+```
+- Output :point_right: [ ] 
+- Reason :point_right: The length of the array has been set to 0, so the array becomes empty
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**2. What will be the output**
+```js
+x = 10;
+console.log(x);
+var x;
+```
+- Output :point_right: 10 
+- Reason :point_right: The declaration of the variable x is hoisted to the top of its scope
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**3. What will be the output**
+```js
+let a = {x:1,y:2}
+let b = a;
+b.x = 3;
+console.log(a);
+console.log(b);
+```
+- Output :point_right: { x: 3, y: 2 } { x: 3, y: 2 } 
+- Reason :point_right: 'a' and 'b' both are pointing to the same reference
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**4. What will be the output**
+```js
+for(var i = 0; i < 10; i++){
+    setTimeout(function(){
+      console.log("value is " + i);
+  })
+}
+```
+- Output :point_right: 10 times, "value is 10"
+- Reason :point_right: "var" has a function scope, and there will be only one shared binding for the iterations. By the time the setTimeout function gets executed, the for loop has already completed and the value of the variable i is 10. 
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**5. What will be the output**
+```js
+for(let i = 0; i < 10; i++){
+    setTimeout(function(){
+      console.log("value is " + i);
+  })
+}
+```
+- Output :point_right: 10 times "value is" followed by the value of i in each iteration, from 0 to 9
+- Reason :point_right: "let" has a block scope, and a new binding will be created for each iteration. Here, a new variable i is created and has a different value for each iteration of the loop
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**6. What will be the output**
+```js
+function hello() {
+  console.log("1");
+    setTimeout(()=>{
+        console.log("2");
+    })
+  console.log("3");
+}
+hello();
+```
+- Output :point_right: "1" followed by "3", and then after a small delay, "2".
+- Reason :point_right: console.log("1") statement logs "1" to the console. Then setTimeout() function is set to execute the callback function in the next event loop iteration and logs "3" to the console
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**7. What will be the output**
+```js
+let f = "8";
+let a = 1;
+console.log((+f)+a+1);
+```
+- Output :point_right: 10
+- Reason :point_right: The expression (+f) is a shorthand way to convert the string value of f to a number. Therefore, (+f) evaluates to 8
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**8. What will be the output**
+```js
+let a = 10;
+if(true){
+   let a = 20;
+   console.log(a, "inside");
+}
+console.log(a, "outside");
+```
+- Output :point_right: 20, "inside" and 10, "outside"
+- Reason :point_right: The variable "a" declared inside "if" has block scope and does not affect the value of the outer "a" variable.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**9. What will be the output**
+```js
+var a = "xyz";
+var a = "pqr";
+console.log(a)
+```
+- Output :point_right: "pqr"
+- Reason :point_right: Both the variables are declared using "var" keyword with the same name "a". The second variable declaration will override the first variable declaration
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**10. What will be the output**
+```js
+const arr1= [1,2,3,4];
+const arr2= [6,7,5];
+const result = [...arr1, ...arr2];
+console.log(result);
+```
+- Output :point_right: [1, 2, 3, 4, 6, 7, 5]
+- Reason :point_right: Spread operator (...) concatenates the two arrays into "result" array
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
