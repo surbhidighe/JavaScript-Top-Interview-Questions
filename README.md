@@ -62,7 +62,9 @@
 | 55 | [If Javascript is single threaded, how it supports asynchronous operations](#55-if-javascript-is-single-threaded-how-it-supports-asynchronous-operations)  |
 | 56 | [What is javascript scope](#56-what-is-javascript-scope)  |
 | 57 | [Difference between global scope and local scope](#57-difference-between-global-scope-and-local-scope)  |
-
+| 58 | [What are the different ways to convert a string to an integer](#58-what-are-the-different-ways-to-convert-a-string-to-an-integer)  |
+| 59 | [How to find the operating system in the client machine using JavaScript](#59-how-to-find-the-operating-system-in-the-client-machine-using-javascript)  |
+| 60 | [Name some JavaScript frameworks and libraries](#60-name-some-javascript-frameworks-and-libraries)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -918,6 +920,33 @@ printName();
 console.log(name); 		// ReferenceError: name is not defined
 ```
 **[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 58. What are the different ways to convert a string to an integer
+
+**1. parseInt()** - This function takes a string and an optional radix (a number between 2 and 36 that represents the base in a numeral system) as its arguments.
+```js
+console.log(parseInt("20"));		// output ========> 20
+console.log(parseInt("52", 8));		// output ========> 42
+```
+**2. unary plus operator (+)** - This operator converts a string into a number and it should be placed before the operand.
+```js
+console.log(+"10");			// output ========> 10
+```
+**3. Number()** - It is a built-in function which converts its argument to a number. If the argument is a string that contains non-numeric characters, then it returns NaN.
+```js
+Number("10");				// output ========> 10
+Number("abc");    			// output ========> NaN
+```
+
+### 59. How to find the operating system in the client machine using JavaScript
+We can use the **navigator.platform** property to find out the operating system of the client machine
+```js
+console.log(navigator.platform); 	// output ========> 'Linux x86_64'
+```
+
+### 60. Name some JavaScript frameworks and libraries
+**Frameworks** - Angular, Ember.js, Vue.js, Meteor, Next.js
+**Libraries** - React, Backbone.js
 
 ## Output Based Questions
 
