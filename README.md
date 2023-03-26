@@ -65,6 +65,8 @@
 | 58 | [What are the different ways to convert a string to an integer](#58-what-are-the-different-ways-to-convert-a-string-to-an-integer)  |
 | 59 | [How to find the operating system in the client machine using JavaScript](#59-how-to-find-the-operating-system-in-the-client-machine-using-javascript)  |
 | 60 | [Name some JavaScript frameworks and libraries](#60-name-some-javascript-frameworks-and-libraries)  |
+| 61 | [What is event bubbling and event capturing](#61-what-is-event-bubbling-and-event-capturing)  |
+| 62 | [What is the role of event.stopPropagation()](#62-what-is-the-role-of-eventstoppropagation)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -937,16 +939,35 @@ console.log(+"10");			// output ========> 10
 Number("10");				// output ========> 10
 Number("abc");    			// output ========> NaN
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 59. How to find the operating system in the client machine using JavaScript
 We can use the **navigator.platform** property to find out the operating system of the client machine
 ```js
 console.log(navigator.platform); 	// output ========> 'Linux x86_64'
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 60. Name some JavaScript frameworks and libraries
 **Frameworks** - Angular, Ember.js, Vue.js, Meteor, Next.js
+
 **Libraries** - React, Backbone.js
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 61. What is event bubbling and event capturing
+Event bubbling and Event Capturing are two different mechanisms used for handling event propagation in the HTML DOM API. When an event is triggered on an element which is inside another element, and both elements have an event listener attached to them , the event propagation mode determines the order in which the elements receive the event.
+
+**Event Bubbling** - The event is first triggered on the innermost element and then propagated/bubbles up to its parent elements and eventually to the outermost element in the DOM hierarchy.
+
+**Event Capturing** - The event is first triggered on the outermost element and then propagated/bubbles down to its child elements and eventually to the innermost element in the DOM hierarchy.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 62. What is the role of event.stopPropagation()
+This method is used to stop the event from propagating up or down the DOM hierarchy.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ## Output Based Questions
 
