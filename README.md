@@ -67,6 +67,11 @@
 | 60 | [Name some JavaScript frameworks and libraries](#60-name-some-javascript-frameworks-and-libraries)  |
 | 61 | [What is event bubbling and event capturing](#61-what-is-event-bubbling-and-event-capturing)  |
 | 62 | [What is the role of event.stopPropagation()](#62-what-is-the-role-of-eventstoppropagation)  |
+| 63 | [How can we change the style of an element using javascript](#63-how-can-we-change-the-style-of-an-element-using-javascript)  |
+| 64 | [What is object destructuring](#64-what-is-object-destructuring)  |
+| 65 | [Difference between an Alert Box and a Confirmation Box](#65-difference-between-an-alert-box-and-a-confirmation-box)  |
+| 66 | [How can we handle exceptions with javascript](#66-how-can-we-handle-exceptions-with-javascript)  |
+| 67 | [What are the advantages of using External JavaScript](#67-what-are-the-advantages-of-using-external-javascript)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -968,6 +973,54 @@ Event bubbling and Event Capturing are two different mechanisms used for handlin
 This method is used to stop the event from propagating up or down the DOM hierarchy.
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 63. How can we change the style of an element using javascript
+To change the style of an element using JavaScript, we can use the style property of the element's DOM object.
+```js
+document.getElementById("myDiv").style.backgroundColor = "red";
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 64. What is object destructuring
+Object destructuring allows you to extract properties from an object and assign them to variables.
+```js
+const fullname = {
+  firstName: 'Surbhi',
+  lastName: 'Dighe',
+};
+const { firstName, lastName } = fullname;
+console.log(firstName); 		// output ========> 'Surbhi'
+console.log(lastName); 			// output ========> 'Dighe'
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 65. Difference between an Alert Box and a Confirmation Box
+**Alert Box** - It has only one button, typically labeled "OK" and it is used to display a message to the user.
+
+**Confirmation Box** - It has two buttons, typically labeled "OK" and "Cancel" and it is used to ask the user to confirm an action. 
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 66. How can we handle exceptions with javascript
+In JavaScript, we can handle exceptions using a try-catch block. The try block contains the code that might throw an exception, and the catch block contains the code that handles the exception if it occurs.
+```js
+try {
+  const name = "Surbhi";
+  console.log(firstname)
+} catch (error) {
+  console.log("Error: " + error);  // output ========> Error: ReferenceError: firstname is not defined
+}
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 67. What are the advantages of using External JavaScript
+- Improve the load time of web pages
+- Ease of editing
+- Code reusability
+- Separation of Code
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 
 ## Output Based Questions
 
