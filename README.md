@@ -72,6 +72,9 @@
 | 65 | [Difference between an Alert Box and a Confirmation Box](#65-difference-between-an-alert-box-and-a-confirmation-box)  |
 | 66 | [How can we handle exceptions with javascript](#66-how-can-we-handle-exceptions-with-javascript)  |
 | 67 | [What are the advantages of using External JavaScript](#67-what-are-the-advantages-of-using-external-javascript)  |
+| 68 | [What is an anonymous function](#68-what-is-an-anonymous-function)  |
+| 69 | [What is a first order function](#69-what-is-a-first-order-function)  |
+| 70 | [Different ways to access object properties in javascript](#70-different-ways-to-access-object-properties-in-javascript)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -98,7 +101,7 @@ var person = {
     occupation: 'Software Engineer'
 }
 ```
-##### b) Object.create method: TCreates a new object, by using an existing object as the prototype of the newly created object.
+##### b) Object.create method: It Creates a new object, by using an existing object as the prototype of the newly created object.
 
 ```javascript
 const person = {
@@ -110,7 +113,6 @@ const person = {
 var info = Object.create(person);
 console.log(info.name); // output - Surbhi
 ```
-Here "person" is an existing object which is passed as a prototype to the newly created object "info"
 
 ##### c) Object constructor: Constructor function allows to create objects with the help of new keyword
 
@@ -128,7 +130,6 @@ class Person {
 }
   
 let person = new Person('Surbhi');
-  
 console.log(person.name);  //output - Surbhi
 ```
 
@@ -161,7 +162,7 @@ const functionName = (something) => {
 ```
 ###### Features of arrow functions
 1. They use a concise syntax which makes them shorter and easier to read as compared to traditional function expressions
-2. They do not bind their own this value, but instead inherit the this value from the enclosing lexical scope (i.e., the scope in which it is defined)
+2. They do not bind their own this value, but instead inherit the this value from the enclosing lexical scope
 3. They do not have "prototype" property and hence cannot be used as a constructor
 4. If the arrow function body consists of a single expression, that expression will be implicitly returned, without the need for a return statement.
 5. If an arrow function has only one parameter, the parentheses around the parameter list can be omitted.
@@ -180,7 +181,6 @@ const arr = [1,2,3];
 const [num1, num2, num3] = arr;
 console.log(num1); // output =====> 1
 console.log(num2); // output =====> 2
-console.log(num3); // output =====> 3
 ```
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
@@ -261,14 +261,12 @@ Hoisting is a default behavior in JavaScript where variable and function declara
 console.log(a);  // output =====> undefined
 var a = 10;
 ```
-The output of above code will be undefined because the declaration of "a" is hoisted to the top of the scope, but the initialization happens later in the code.
 
 ```javascript
 a=10;
 console.log(a);  // output =====> 10
 var a;
 ```
-The output of above code will be 10 because the variable "a" is hoisted to the top of the scope and its value is assigned before console.log
 
 **Function hoisting**
 ```javascript
@@ -277,7 +275,7 @@ function demo() {
 	console.log('demo console'); 
 }
 ```
-The output of above code will be "demo console" because the function declaration is hoisted to the top of the scope, allowing it to be called before it is declared in the code.
+
 ```diff
 **Note**
 + Only function declarations are hoisted, not the function expressions.
@@ -693,10 +691,8 @@ let var1 = "Surbhi";
 let var2 = 10;
 console.log(typeof var1);	// output ========> "string"
 console.log(typeof var2);       // output ========> "number"
-console.log(typeof "hello");	// output ========> "string"
-console.log(typeof 2);		// output ========> "number"
-console.log(typeof true);	// output ========> "boolean"
 ```
+
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
 ### 41. Is JavaScript case-sensitive
@@ -1021,6 +1017,44 @@ try {
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
+### 68. What is an anonymous function
+An anonymous function is a function that does not have a name. It is common to assign anonymous functions to a variable or use them as callback functions.
+```js
+const sayHi = function() {
+  console.log("Hi there!!");
+};
+sayHi();
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 69. What is a first order function
+A first order function is a function that does not take any other functions as arguments and does not return any function as its result.
+```js
+function sayHello() {
+  console.log("A first order function")
+}
+sayHello();
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 70. Different ways to access object properties in javascript
+**Dot notation** -  It uses dot (.) to access the object properties.
+```js
+object.propertyName
+```
+**Bracket notation** - It uses bracket "[ ]" to access the object properties.
+```js
+object[propertyName]
+```
+**Object destructuring** - It creates variables that correspond to the object properties.
+```js
+const obj1 = {name : "surbhi", designation : "SE"}
+const {name , designation} = obj1;
+console.log(name, designation)   	// output ========> "Surbhi","SE"
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ## Output Based Questions
 
