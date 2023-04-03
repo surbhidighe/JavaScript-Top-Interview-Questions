@@ -75,6 +75,16 @@
 | 68 | [What is an anonymous function](#68-what-is-an-anonymous-function)  |
 | 69 | [What is a first order function](#69-what-is-a-first-order-function)  |
 | 70 | [Different ways to access object properties in javascript](#70-different-ways-to-access-object-properties-in-javascript)  |
+| 71 | [Difference between slice() and splice()](#71-difference-between-slice-and-splice)  |
+| 72 | [What are the escape characters in JavaScript](#72-what-are-the-escape-characters-in-javascript)  |
+| 73 | [Different ways to redirect a page in javascript](#73-different-ways-to-redirect-a-page-in-javascript)  |
+| 74 | [What is the difference between innerHTML and innerText](#74-what-is-the-difference-between-innerhtml-and-innertext)  |
+| 75 | [How can you get current time using js](#75-how-can-you-get-current-time-using-js)  |
+| 76 | [What is currying](#76-what-is-currying)  |
+| 77 | [Difference between shallow copy and deep copy](#77-difference-between-shallow-copy-and-deep-copy)  |
+| 78 | [What is a service worker](#78-what-is-a-service-worker)  |
+| 79 | [What is JSON](#79-what-is-json)  |
+| 80 | [How can you get all the keys of any object](#80-how-can-you-get-all-the-keys-of-any-object)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1052,6 +1062,131 @@ object[propertyName]
 const obj1 = {name : "surbhi", designation : "SE"}
 const {name , designation} = obj1;
 console.log(name, designation)   	// output ========> "Surbhi","SE"
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 71. Difference between slice() and splice()
+**slice()** - This method creates a new array by copying a specified section of an existing array and returns that new array. This operation does not modify the original array in any way.
+```js
+const arr=[1,2,3,4,5];
+const result = arr.slice(2)
+console.log(arr);		// output ========> [1, 2, 3, 4, 5]
+console.log(result);		// output ========> [3, 4, 5]
+```
+
+**splice()** - This method is used to add or remove elements from an array. It modifies the original array and returns an array containing the removed elements (if any).
+```js
+const arr=[1,2,3,4,5];
+const result = arr.splice(2)
+console.log(arr); 		// output ========> [1, 2]
+console.log(result);		// output ========> [3, 4, 5]
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 72. What are the escape characters in JavaScript
+When working with special characters such as ampersands (&), apostrophes ('), double quotes (" "), and single quotes (' '). JavaScript requires the use of escape characters, which are often represented by the backslash (\). These escape characters instruct JavaScript to interpret the special characters correctly.
+Below are some common escape characters in JavaScript:
+- \n - Represents a newline character.
+- \t - Represents a tab character.
+- \' - Represents a single quote character.
+- \" - Represents a double quote character.
+- \\ - Represents a backslash character.
+- \r - Represents a carriage return character.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 73. Different ways to redirect a page in javascript
+**location.href** - It is used to navigate to a new page and add it to the browser's history.
+```js
+window.location.href = "https://www.example.com";
+```
+**location.replace** - It is used to replace the current page with a new page without adding it to the history.
+```js
+window.location.replace("https://www.example.com");
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 74. What is the difference between innerHTML and innerText
+innerHTML retrieves or modifies the HTML content of an element, including its tags, while innerText only retrieves or modifies the text content of an element, excluding any HTML tags.
+```js
+//HTML code
+<div id="example">Hello <strong>world</strong>!</div>
+
+//Javascript code
+let result = document.getElementById("example").innerHTML;
+console.log(result); 		// output ========> "Hello <strong>world</strong>!"
+```
+```js
+//HTML code
+<div id="example">Hello <strong>world</strong>!</div>
+
+//Javascript code
+let result = document.getElementById("example").innerText;
+console.log(result); 		// output ========> "Hello world!"
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 75. How can you get current time using js
+To get the current time using JavaScript, you can use the built-in Date object.
+```js
+let currentTime = new Date();
+let hours = currentTime.getHours();
+let minutes = currentTime.getMinutes();
+let seconds = currentTime.getSeconds();
+console.log(`Current time is ${hours}:${minutes}:${seconds}`); // output ========> "Current time is 16:7:22"
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 76. What is currying
+Currying is the process of breaking down a function that takes multiple arguments into a series of functions that take a single argument.
+```js
+const add = (a, b) => {
+  return a + b;
+}
+const curryingAdd = (a) => (b) => a + b;
+console.log(add(5, 4)); 			// output ========> 9
+console.log(curryingAdd(5)(4));			// output ========> 9
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 77. Difference between shallow copy and deep copy
+**shallow copy** - It creates a new object that points to the same memory location as the original object. Therefore, any changes made to the original object will also be reflected in the shallow copy. It can be done using the spread operator or object.assign() method.
+
+**deep copy** - It creates a completely new object with its own memory space. This means that any changes made to the original object will not be reflected in the deep copy. It can be done using the JSON.parse() and JSON.stringify() methods.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 78. What is a service worker
+A service worker is a kind of web worker that operates in the background of a web page, decoupled from the primary browser thread, and capable of executing diverse tasks. It is essentially a JavaScript file that is associated with a web page and executes independently, without depending on the user interface.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 79. What is JSON
+JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
+```js
+{
+"users":[
+    {"name":"Test1", "age":"20"},
+    {"name":"Test2", "age":"30"},
+    {"name":"Test3", "age":"40"}
+]
+}
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 80. How can you get all the keys of any object
+The Object.keys() method returns an array containing all the keys of the object
+```js
+const obj1 = {
+  name: 'Surbhi',
+  city: 'Indore'
+};
+const keys = Object.keys(obj1);
+console.log(keys); 			// output ========> ["name", "city"]
 ```
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
