@@ -85,6 +85,9 @@
 | 78 | [What is a service worker](#78-what-is-a-service-worker)  |
 | 79 | [What is JSON](#79-what-is-json)  |
 | 80 | [How can you get all the keys of any object](#80-how-can-you-get-all-the-keys-of-any-object)  |
+| 81 | [What is a unary function](#81-what-is-a-unary-function)  |
+| 82 | [What is promise chaining](#82-what-is-promise-chaining)  |
+| 83 | [What is eval](#83-what-is-eval)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1191,6 +1194,32 @@ console.log(keys); 			// output ========> ["name", "city"]
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
+### 81. What is a unary function
+A unary function is a function that takes only one argument
+```js
+function greet(message){
+console.log(message, "unary function example");
+}
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 82. What is promise chaining
+Promise chaining is the term used to describe the process of executing a series of asynchronous tasks one after another in a specific order
+```js
+fetch('API_URL')
+  .then(response => response.json())
+  .then(data => printData(data))
+  .then(anotherData => printAnotherData(anotherData))
+  .then(finalData => printFinalData(finalData))
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 83. What is eval
+The eval() is a method of the JavaScript global object and it takes a string as an argument and evaluates it.
+```js
+console.log("10" + "20"); 		// output ========> 30
+```
 ## Output Based Questions
 
 **1. What will be the output**
