@@ -88,6 +88,8 @@
 | 81 | [What is a unary function](#81-what-is-a-unary-function)  |
 | 82 | [What is promise chaining](#82-what-is-promise-chaining)  |
 | 83 | [What is eval](#83-what-is-eval)  |
+| 84 | [How can you assign default values to variables](#84-how-can-you-assign-default-values-to-variables)  |
+| 85 | [How to determine if an object is extensible or not](#85-how-to-determine-if-an-object-is-extensible-or-not)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1220,6 +1222,29 @@ The eval() is a method of the JavaScript global object and it takes a string as 
 ```js
 console.log("10" + "20"); 		// output ========> 30
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 84. How can you assign default values to variables
+You can assign default values to variables using the || operator. If the variable on the left-hand side of the || operator is falsy (e.g. null, 0, undefined, NaN, empty string, false), the expression on the right-hand side of the || operator will be returned. 
+
+```js
+const var1 = undefined || 'default value';
+console.log(var1); 			// output ========> "default value"
+```
+```js
+const var1 = "surbhi" || 'default value';
+console.log(var1);			// output ========> "surbhi"
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 85. How to determine if an object is extensible or not
+Object.isExtensible() method is used to determine if an object is extensible or not. It returns true if new properties can be added to the object otherwise it returns false.
+```js
+const obj1 = { name: 'surbhi' };
+console.log(Object.isExtensible(obj1));		// output ========> true
+```
+
 ## Output Based Questions
 
 **1. What will be the output**
