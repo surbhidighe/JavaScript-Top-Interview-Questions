@@ -90,6 +90,7 @@
 | 83 | [What is eval](#83-what-is-eval)  |
 | 84 | [How can you assign default values to variables](#84-how-can-you-assign-default-values-to-variables)  |
 | 85 | [How to determine if an object is extensible or not](#85-how-to-determine-if-an-object-is-extensible-or-not)  |
+| 86 | [In how many ways we can make an object non-extensible](#86-in-how-many-ways-we-can-make-an-object-non-extensible)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1244,6 +1245,15 @@ Object.isExtensible() method is used to determine if an object is extensible or 
 const obj1 = { name: 'surbhi' };
 console.log(Object.isExtensible(obj1));		// output ========> true
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 86. In how many ways we can make an object non-extensible
+
+- Object.preventExtensions()
+- Object.seal()
+- Object.freeze()
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
 
 ## Output Based Questions
 
