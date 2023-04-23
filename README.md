@@ -91,6 +91,8 @@
 | 84 | [How can you assign default values to variables](#84-how-can-you-assign-default-values-to-variables)  |
 | 85 | [How to determine if an object is extensible or not](#85-how-to-determine-if-an-object-is-extensible-or-not)  |
 | 86 | [In how many ways we can make an object non-extensible](#86-in-how-many-ways-we-can-make-an-object-non-extensible)  |
+| 87 | [What is object.freeze method](#87-what-is-objectfreeze-method)  |
+| 88 | [What is object.seal method](#88-what-is-objectseal-method)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1252,6 +1254,41 @@ console.log(Object.isExtensible(obj1));		// output ========> true
 - Object.preventExtensions()
 - Object.seal()
 - Object.freeze()
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 87. What is object.freeze method
+- Object.freeze makes the object immutable
+- Can not add new properties to existing object
+- Can not delete or modify existing properties
+
+```js
+const obj = {
+  property1: 'value 1',
+  property2: 'value 2',
+};
+Object.freeze(obj);
+obj.property1 = 'new value';    // This will not modify the existing property
+obj.property3 = 'value 3'; 	// This will not add new property to the object
+console.log(obj);		// output ========> { property1: "value 1", property2: "value 2" }
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 88. What is object.seal method
+- Object.seal makes the object immutable 
+- Can not add new properties or delete existing properties
+- Can modify existing properties. 
+```js
+const obj = {
+  property1: 'value 1',
+  property2: 'value 2',
+};
+Object.seal(obj);
+obj.property1 = 'new value';    // This will modify the existing property
+obj.property3 = 'value 3'; 	// This will not add new property to the object
+console.log(obj);		// output ========> { property1: "new value", property2: "value 2" }
+```
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
