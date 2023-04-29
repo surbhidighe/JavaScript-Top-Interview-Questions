@@ -93,6 +93,8 @@
 | 86 | [In how many ways we can make an object non-extensible](#86-in-how-many-ways-we-can-make-an-object-non-extensible)  |
 | 87 | [What is object.freeze method](#87-what-is-objectfreeze-method)  |
 | 88 | [What is object.seal method](#88-what-is-objectseal-method)  |
+| 89 | [How can you determine if JavaScript is disabled on a page](#89-how-can-you-determine-if-javascript-is-disabled-on-a-page)  |
+| 90 | [How can you compare two date objects](#90-how-can-you-compare-two-date-objects)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1290,6 +1292,29 @@ obj.property3 = 'value 3'; 	// This will not add new property to the object
 console.log(obj);		// output ========> { property1: "new value", property2: "value 2" }
 ```
 
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 89. How can you determine if JavaScript is disabled on a page
+```<noscript>``` tag is used to determine if JavaScript is disabled on a page. It provides alternative content that should be displayed when JavaScript is not supported or disabled in the user's browser.
+```js
+<noscript>
+  <p>JavaScript is disabled in your browser.</p>
+</noscript>
+<script>
+  console.log("JavaScript is enabled on page");
+</script>
+```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 90. How can you compare two date objects
+getTime() method is used to compare two date objects.
+```js
+let date1 = new Date();
+let date2 = new Date(date1);
+console.log(date1.getTime() < date2.getTime());		// output ========> false
+console.log(date1.getTime() > date2.getTime()); 	// output ========> false
+console.log(date1.getTime() === date2.getTime()); 	// output ========> true
+```
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
 ## Output Based Questions
