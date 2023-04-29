@@ -1443,3 +1443,32 @@ console.log(result);
 - Reason :point_right: Spread operator (...) concatenates the two arrays into "result" array
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
+
+**11. What will be the output**
+```js
+const person1 = { name: 'xyz', age: 21 };
+const person2 = { city: 'abc', ...person1 };
+console.log(person2);
+```
+- Output :point_right: { city: 'abc', name: 'xyz', age: 21 }
+- Reason :point_right: Spread operator (...) copies all the properties from person1 into person2
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**12. What will be the output**
+```js
+console.log(5 < 6 < 7);
+```
+- Output :point_right: true
+- Reason :point_right: In JavaScript, the < operator evaluates expressions from left to right. First, the expression 5 < 6 is evaluated, resulting in true because 5 is less than 6. Then, the expression true < 7 is evaluated. In this case, JavaScript performs type coercion and converts true to the number 1. Therefore, the expression becomes 1 < 7, which is true.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+**13. What will be the output**
+```js
+console.log(7 > 6 > 5);
+```
+- Output :point_right: false
+- Reason :point_right: In JavaScript, the > operator evaluates expressions from left to right. First, the expression 7 > 6 is evaluated, resulting in true because 7 is greater than 6. Then, the expression true > 5 is evaluated. In this case, JavaScript performs type coercion and converts true to the number 1. Therefore, the expression becomes 1 > 5, which is false.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
