@@ -95,6 +95,8 @@
 | 88 | [What is object.seal method](#88-what-is-objectseal-method)  |
 | 89 | [How can you determine if JavaScript is disabled on a page](#89-how-can-you-determine-if-javascript-is-disabled-on-a-page)  |
 | 90 | [How can you compare two date objects](#90-how-can-you-compare-two-date-objects)  |
+| 91 | [Does JavaScript support automatic type conversion](#91-does-javascript-support-automatic-type-conversion)  |
+| 92 | [What is variable shadowing in javascript](#92-what-is-variable-shadowing-in-javascript)  |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1315,6 +1317,25 @@ console.log(date1.getTime() < date2.getTime());		// output ========> false
 console.log(date1.getTime() > date2.getTime()); 	// output ========> false
 console.log(date1.getTime() === date2.getTime()); 	// output ========> true
 ```
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 91. Does JavaScript support automatic type conversion
+Yes, JavaScript supports automatic type conversion. It refers to the implicit conversion of one data type to another by the JavaScript engine.
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 92. What is variable shadowing in javascript
+Variable shadowing means a variable declared in a local scope has the same name as a variable declared in an outer scope. The inner variable "shadows" the outer variable and the outer variable is said to be shadowed.
+```js
+let x = 10; 
+function Demo() {
+  let x = 20; 
+  console.log(x); 	// output ========> 20
+}
+myFunction();
+console.log(x); 	// output ========> 10
+```
+
 **[:top: Scroll to Top](#javascript-interview-questions)**
 
 ## Output Based Questions
