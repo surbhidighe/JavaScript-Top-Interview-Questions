@@ -1,7 +1,20 @@
-## JavaScript interview questions 
+# JavaScript interview questions 
 
+##### Click :star: if you like the project!!
+Every contribution counts, regardless of its size. I value and appreciate the efforts of all contributors, from beginners to seasoned developers. Join me on this exciting journey of open-source collaboration. **Together, let's build something amazing!** :handshake:
 
-### :writing_hand: ----- In Progress ----- :writing_hand:
+--- 
+
+#### Contribution Guidelines
+
+- :point_right: Please ensure that your contributions adhere to the coding style and guidelines of this project
+- :point_right: Include clear and concise commit messages for all your commits
+- :point_right: Provide a detailed description of your changes in the pull request.
+- :point_right: Be respectful and considerate towards other contributors.
+
+---
+
+## Table of Contents
 
 | S.No  | Questions |
 | ------------- | ------------- |
