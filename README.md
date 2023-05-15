@@ -1,6 +1,12 @@
 # JavaScript interview questions 
 
-##### Click :star: if you like the project!!
+- #### [Theoritical Questions](#theoritical-questions)
+- #### [Output Based Questions](#output-based-questions)
+- #### [Coding Exercise](#coding-exercise)
+
+---
+
+#### Click :star: if you like the project!!
 Every contribution counts, regardless of its size. I value and appreciate the efforts of all contributors, from beginners to seasoned developers. Join me on this exciting journey of open-source collaboration. **Together, let's build something amazing!** :handshake:
 
 --- 
@@ -14,7 +20,7 @@ Every contribution counts, regardless of its size. I value and appreciate the ef
 
 ---
 
-## Table of Contents
+## Theoritical Questions
 
 | S.No  | Questions |
 | ------------- | ------------- |
