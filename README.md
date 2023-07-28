@@ -1,9 +1,4 @@
 # JavaScript interview questions 
-
-- #### [Theoritical Questions](#theoritical-questions)
-- #### [Output Based Questions](#output-based-questions)
-- #### [Coding Exercise](#coding-exercise)
-
 ---
 
 #### Click :star: if you like the project!!
@@ -116,6 +111,7 @@ Every contribution counts, regardless of its size. I value and appreciate the ef
 | 90 | [How can you compare two date objects](#90-how-can-you-compare-two-date-objects)  |
 | 91 | [Does JavaScript support automatic type conversion](#91-does-javascript-support-automatic-type-conversion)  |
 | 92 | [What is variable shadowing in javascript](#92-what-is-variable-shadowing-in-javascript)  |
+| 93 | [What is ternary operator](#93-what-is-ternary-operator) |
 
 ### 1. What is JavaScript
 * JavaScript is a scripting language used to create dynamic and interactive websites. It is supported by all major web browsers.
@@ -1356,6 +1352,23 @@ console.log(x); 	// output ========> 10
 ```
 
 **[:top: Scroll to Top](#javascript-interview-questions)**
+
+### 93. What is ternary operator
+The ternary operator is a shorthand conditional operator that allows you to write a compact if-else statement in a single line.
+```js
+condition ? expression1 : expression2;
+```
+It is evaluated from left to right. If the condition is true, the result of the entire expression is expression1, otherwise it's expression2.
+
+```js
+let number = 20 ;
+let result = number >= 15 ? "output 1" : "output 2";
+console.log(result); 	// output ========> output 1
+
+```
+
+**[:top: Scroll to Top](#javascript-interview-questions)**
+
 
 ## Output Based Questions
 
