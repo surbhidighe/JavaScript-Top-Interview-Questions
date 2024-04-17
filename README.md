@@ -267,7 +267,8 @@ console.log(demo); // output =====> undefined
 ### 13. What is Temporal Dead Zone
 A "let" or "const" variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared and initialized.
 
-In JavaScript, variables declared with let or const are not hoisted to the top of the block scope. If you try to access a variable before it is declared, a ReferenceError will be thrown.
+In JavaScript, variables declared with let or const are hoisted to the top of the block scope, but they enter a "Temporal Dead Zone" (TDZ). 
+
 ```javascript
 {
   // TDZ for name variable starts here
